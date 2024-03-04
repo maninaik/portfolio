@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { Inter, Roboto_Mono } from 'next/font/google'
+import { Inter, Roboto_Mono, Space_Mono } from 'next/font/google'
 import './globals.css'
 import Nav from '@/components/nav'
 import SocialHandles from '@/components/social-handles'
@@ -15,10 +15,11 @@ const inter = Inter({
 	variable: '--font-inter',
 })
 
-const roboto_mono = Roboto_Mono({
+const roboto_mono = Space_Mono({
 	subsets: ['latin'],
 	display: 'swap',
-	variable: '--font-roboto-mono',
+	variable: '--font-space-mono',
+	weight: '400',
 })
 
 export default function RootLayout({
@@ -28,10 +29,10 @@ export default function RootLayout({
 }>) {
 	return (
 		<html lang="en">
-			<body className={`${inter.className} ${roboto_mono.className}`}>
+			<body className={`${inter.variable} ${roboto_mono.variable}`}>
 				<Nav />
 				<SocialHandles />
-				<main className="px-40">{children}</main>
+				<main className="px-32 font-sans">{children}</main>
 			</body>
 		</html>
 	)

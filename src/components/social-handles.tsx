@@ -16,23 +16,25 @@ const socialHandles = [
 	},
 	{
 		name: 'Instagram',
-		url: 'https://www.instagram.com/maniinaik/',
+		url: 'https://instagram.com/maniinaik/',
 	},
 ]
 const SocialHandles = () => {
 	return (
 		<div className="fixed left-8 bottom-0">
-			{socialHandles.map(({ name, url }) => (
-				<li
-					key={name}
-					className="list-none py-2">
-					<a
-						href={url}
-						aria-label={name}>
-						<Icon name={name} />
-					</a>
-				</li>
-			))}
+			<ol className="mn-social-handle__list flex flex-col items-center">
+				{socialHandles.map(({ name, url }) => (
+					<li
+						key={name}
+						className="list-none py-2">
+						<a
+							href={url}
+							aria-label={name}>
+							<Icon name={name} />
+						</a>
+					</li>
+				))}
+			</ol>
 		</div>
 	)
 }

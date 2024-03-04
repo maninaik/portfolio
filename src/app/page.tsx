@@ -1,13 +1,23 @@
-import Image from 'next/image'
+import About from '@/components/about'
+import Experience from '@/components/experience'
+import Hero from '@/components/hero'
 
 export default function Home() {
 	return (
-		<div>
-			<h1 className="text-mn-green mb-8 font-mono">Hi, my name is</h1>
-			<h2 className="text-white text-7xl font-bold">Mani Naik.</h2>
-			<h3 className="text-7xl font-bold">
-				I build things for the web
-			</h3>
-		</div>
+		<>
+			<section className="h-screen flex flex-col justify-center">
+				<Hero />
+			</section>
+			<section
+				className="py-36 flex flex-col justify-center"
+				id="about">
+				<About />
+			</section>
+			<section
+				className="py-36 flex flex-col justify-center items-center"
+				id="experience">
+				<Experience />
+			</section>
+		</>
 	)
 }

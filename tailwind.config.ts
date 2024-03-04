@@ -16,10 +16,15 @@ const config: Config = {
 			},
 			colors: {
 				'mn-green': '#64ffda',
+				'foreground': 'var(--foreground)',
+				'lightest-navy': 'var(--lightest-navy)',
 			},
 			fontFamily: {
 				sans: ['var(--font-inter)'],
-				mono: ['var(--font-roboto-mono)'],
+				mono: ['var(--font-space-mono)'],
+			},
+			gridTemplateColumns: {
+				'32': '3fr 2fr',
 			},
 		},
 	},
