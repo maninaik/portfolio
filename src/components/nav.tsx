@@ -4,7 +4,7 @@ import React from 'react'
 const navList = [
 	{ name: 'About', url: '#about' },
 	{ name: 'Experience', url: '#experience' },
-	{ name: 'Work', url: '#work' },
+	// { name: 'Work', url: '#work' },
 	{ name: 'Contact', url: '#contact' },
 ]
 

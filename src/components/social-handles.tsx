@@ -29,7 +29,9 @@ const SocialHandles = () => {
 						className="list-none py-2">
 						<a
 							href={url}
-							aria-label={name}>
+							className="hover:text-mn-green transition"
+							aria-label={name}
+							target="_blank">
 							<Icon name={name} />
 						</a>
 					</li>

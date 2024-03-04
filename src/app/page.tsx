@@ -1,4 +1,5 @@
 import About from '@/components/about'
+import Contact from '@/components/contact'
 import Experience from '@/components/experience'
 import Hero from '@/components/hero'
 
@@ -17,6 +18,11 @@ export default function Home() {
 				className="py-36 flex flex-col justify-center items-center"
 				id="experience">
 				<Experience />
+			</section>
+			<section
+				className="py-36 flex flex-col justify-center items-center"
+				id="contact">
+				<Contact />
 			</section>
 		</>
 	)

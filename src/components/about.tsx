@@ -40,7 +40,7 @@ const About = () => {
 					</ul>
 				</div>
 
-				<div>
+				<div className="mn-img-green-tint">
 					<Image
 						className="aspect-square object-cover"
 						src="/image/Mani pic.jpg"

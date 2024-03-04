@@ -3,6 +3,7 @@ import { Inter, Roboto_Mono, Space_Mono } from 'next/font/google'
 import './globals.css'
 import Nav from '@/components/nav'
 import SocialHandles from '@/components/social-handles'
+import Footer from '@/components/footer'
 
 export const metadata: Metadata = {
 	title: 'Mani Naik',
@@ -33,6 +34,7 @@ export default function RootLayout({
 				<Nav />
 				<SocialHandles />
 				<main className="px-32 font-sans">{children}</main>
+				<Footer />
 			</body>
 		</html>
 	)
