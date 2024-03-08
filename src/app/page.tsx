@@ -1,7 +1,10 @@
-import About from '@/components/about'
-import Contact from '@/components/contact'
-import Experience from '@/components/experience'
-import Hero from '@/components/hero'
+import dynamic from 'next/dynamic'
+const Hero = dynamic(() => import('@/components/hero'), { ssr: false })
+const About = dynamic(() => import('@/components/about'), { ssr: false })
+const Experience = dynamic(() => import('@/components/experience'), {
+	ssr: false,
+})
+const Contact = dynamic(() => import('@/components/contact'), { ssr: false })
 
 export default function Home() {
 	return (

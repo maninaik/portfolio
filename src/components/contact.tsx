@@ -1,6 +1,16 @@
+'use client'
+import sr from '@/libs/scrollreveal'
+import { useEffect, useRef } from 'react'
+
 const Contact = () => {
+	const revealRef = useRef(null)
+	useEffect(() => {
+		if (revealRef.current && sr) sr.reveal(revealRef.current)
+	}, [])
 	return (
-		<div className="flex flex-col justify-center items-center max-w-[600px]">
+		<div
+			className="flex flex-col justify-center items-center max-w-[600px]"
+			ref={revealRef}>
 			<h2 className="text-lg text-mn-green font-mono mb-5">
 				03. What&apos;s next ?
 			</h2>

@@ -1,8 +1,15 @@
-import React from 'react'
+'use client'
+import sr from '@/libs/scrollreveal'
+import React, { useEffect, useRef } from 'react'
 
 const Hero = () => {
+	const revealRef = useRef(null)
+	useEffect(() => {
+		if (revealRef.current && sr) sr.reveal(revealRef.current)
+	}, [])
+
 	return (
-		<>
+		<div ref={revealRef}>
 			<h1 className="text-mn-green mb-8 font-mono">Hi, my name is</h1>
 			<h2 className="text-white text-7xl font-bold">Mani Naik.</h2>
 			<h3 className="text-7xl font-bold font-sans">
@@ -30,7 +37,7 @@ const Hero = () => {
 					Resume
 				</a>
 			</div>
-		</>
+		</div>
 	)
 }
 

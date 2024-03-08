@@ -1,5 +1,6 @@
 'use client'
-import React, { useState } from 'react'
+import sr from '@/libs/scrollreveal'
+import React, { useEffect, useRef, useState } from 'react'
 
 const jobs = [
 	{
@@ -40,6 +41,11 @@ const jobs = [
 ]
 const Experience = () => {
 	const [activeTab, setActiveTab] = useState(0)
+
+	const revealRef = useRef(null)
+	useEffect(() => {
+		if (revealRef.current && sr) sr.reveal(revealRef.current)
+	}, [])
 	return (
 		<div className="max-w-[700px]">
 			<div className="flex items-center mb-8 gap-4">

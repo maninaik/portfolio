@@ -1,9 +1,15 @@
+'use client'
+import sr from '@/libs/scrollreveal'
 import Image from 'next/image'
-import React from 'react'
+import React, { useEffect, useRef } from 'react'
 
 const About = () => {
+	const revealRef = useRef(null)
+	useEffect(() => {
+		if (revealRef.current && sr) sr.reveal(revealRef.current)
+	}, [])
 	return (
-		<div>
+		<div ref={revealRef}>
 			<div className="flex items-center mb-8 gap-4">
 				<h2 className="font-bold text-white text-2xl">
 					<span className="text-mn-green font-mono">01.</span>{' '}
