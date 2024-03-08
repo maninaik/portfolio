@@ -47,19 +47,19 @@ const Experience = () => {
 		if (revealRef.current && sr) sr.reveal(revealRef.current)
 	}, [])
 	return (
-		<div className="max-w-[700px]">
+		<div className="max-w-[700px] w-full">
 			<div className="flex items-center mb-8 gap-4">
 				<h2 className="font-bold text-white text-2xl">
 					<span className="text-mn-green font-mono">02.</span>
 					Work Experience
 				</h2>
-				<div className="h-[1px] w-[300px] bg-zinc-700"></div>
+				<div className="h-[1px] w-[300px] max-w-[40%] bg-zinc-700"></div>
 			</div>
 
-			<div className="flex">
+			<div className="flex flex-wrap md:flex-nowrap gap-5 md:gap-0">
 				{/* company list */}
-				<div className="w-1/5">
-					<ul className="font-mono flex flex-col tablist">
+				<div className="md:w-1/5 max-w-full min-w-36 overflow-x-scroll">
+					<ul className="font-mono flex flex-row tablist md:flex-col">
 						{jobs.map((job, index) => (
 							<button
 								key={job.name}
@@ -73,9 +73,14 @@ const Experience = () => {
 							</button>
 						))}
 						<div
-							className="tablist_selected"
+							className="tablist_selected md:block hidden"
 							style={{
 								transform: `translateY(calc(${activeTab} * 52px ))`,
+							}}></div>
+						<div
+							className="tablist_selected block md:hidden"
+							style={{
+								transform: `translateX(calc(${activeTab} * 140px ))`,
 							}}></div>
 					</ul>
 				</div>

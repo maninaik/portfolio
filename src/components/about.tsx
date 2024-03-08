@@ -15,10 +15,10 @@ const About = () => {
 					<span className="text-mn-green font-mono">01.</span>{' '}
 					About Me
 				</h2>
-				<div className="h-[1px] w-[300px] bg-zinc-700"></div>
+				<div className="h-[1px] w-[300px] max-w-[40%] bg-zinc-700"></div>
 			</div>
 
-			<div className="grid grid-cols-32  gap-12">
+			<div className="grid md:grid-cols-32 grid-cols-1 gap-12">
 				<div>
 					Hello! My Name is Mani and I enjoy creating things that
 					live on the internet. My interest in web development

@@ -32,8 +32,8 @@ export default function RootLayout({
 		<html lang="en">
 			<body className={`${inter.variable} ${roboto_mono.variable}`}>
 				<Nav />
-				<SocialHandles />
-				<main className="px-32 font-sans">{children}</main>
+				<SocialHandles className="hidden md:block" />
+				<main className="md:px-32 px-5 font-sans">{children}</main>
 				<Footer />
 			</body>
 		</html>

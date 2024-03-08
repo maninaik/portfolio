@@ -19,10 +19,11 @@ const socialHandles = [
 		url: 'https://instagram.com/maniinaik/',
 	},
 ]
-const SocialHandles = () => {
+const SocialHandles = ({ className = '' }: { className?: string }) => {
 	return (
-		<div className="fixed left-8 bottom-0">
-			<ol className="mn-social-handle__list flex flex-col items-center">
+		<div
+			className={`md:fixed left-8 bottom-0 w-full px-5 md:px-0 md:w-auto ${className}`}>
+			<ol className="mn-social-handle__list flex md:flex-col items-center gap-8 md:gap-0 justify-evenly">
 				{socialHandles.map(({ name, url }) => (
 					<li
 						key={name}

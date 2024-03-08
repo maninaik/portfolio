@@ -12,6 +12,7 @@ html {
 	--green: #64ffda;
 	--transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1);
 	--tab-height: 52px;
+	--tab-width: 140px;
 	--lightest-navy: #233554;
 }
 
@@ -130,6 +131,7 @@ body {
 	position: relative;
 	max-width: 250px;
 	max-height: 250px;
+	min-width: 250px;
 	transition: var(--transition);
 }
 
@@ -157,4 +159,34 @@ body {
 
 .mn-img-green-tint:hover::after {
 	transform: translate(10px, 10px);
+}
+
+@media (max-width: 768px) {
+	.mn-img-green-tint {
+		margin: 0 auto;
+		transform: translateX(-7px);
+	}
+
+	.tablist button {
+		border-left: none;
+		border-bottom: 1px solid var(--lightest-navy);
+		width: var(--tab-width);
+		flex-shrink: 0;
+		text-align: center;
+	}
+
+	.tablist .tablist_selected {
+		top: auto;
+		bottom: 0px;
+		height: 1px;
+		width: var(--tab-width);
+	}
+
+	.mn-social-handle__list::after {
+		display: none;
+	}
+
+	.mn-social-handle__list li:last-child {
+		margin-bottom: 0;
+	}
 }

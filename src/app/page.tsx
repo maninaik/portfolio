@@ -9,7 +9,7 @@ const Contact = dynamic(() => import('@/components/contact'), { ssr: false })
 export default function Home() {
 	return (
 		<>
-			<section className="h-screen flex flex-col justify-center">
+			<section className="py-36 flex flex-col justify-center">
 				<Hero />
 			</section>
 			<section
