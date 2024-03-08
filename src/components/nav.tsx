@@ -1,7 +1,5 @@
-'use client'
-import sr from '@/utils/scrollreveal'
 import Link from 'next/link'
-import React, { useEffect, useRef } from 'react'
+import React from 'react'
 
 const navList = [
 	{ name: 'About', url: '#about' },
@@ -11,16 +9,8 @@ const navList = [
 ]
 
 const Nav = () => {
-	const revealRef = useRef(null)
-
-	useEffect(() => {
-		if (revealRef.current) sr.reveal(revealRef.current)
-	}, [])
-
 	return (
-		<header
-			className="h-16 flex items-center"
-			ref={revealRef}>
+		<header className="h-16 flex items-center">
 			<div className="flex ml-auto">
 				<ol className="flex flex-row ml-auto font-mono pr-16">
 					{navList.map(({ name, url }, index) => (
