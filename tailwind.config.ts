@@ -18,6 +18,7 @@ const config: Config = {
 				'mn-green': '#64ffda',
 				'foreground': 'var(--foreground)',
 				'lightest-navy': 'var(--lightest-navy)',
+				'secondary': 'var(--background)',
 			},
 			fontFamily: {
 				sans: ['var(--font-inter)'],
