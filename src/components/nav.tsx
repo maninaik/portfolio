@@ -1,6 +1,6 @@
 'use client'
 import Link from 'next/link'
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 
 const navList = [
 	{ name: 'About', url: '#about' },
@@ -11,6 +11,10 @@ const navList = [
 
 const Nav = () => {
 	const [isSideMenuOpen, setIsSideMenuOpen] = useState(false)
+
+	useEffect(() => {
+		document.body.style.overflow = isSideMenuOpen ? 'hidden' : 'unset'
+	}, [isSideMenuOpen])
 
 	const toggleMenu = () => setIsSideMenuOpen(prevVal => !prevVal)
 
@@ -35,7 +39,7 @@ const Nav = () => {
 
 			<button
 				onClick={toggleMenu}
-				className="pr-4 z-20">
+				className="pr-4 z-20 block md:hidden">
 				<div className="hamburger-menu">
 					<div
 						className={`hamburger-menu_line ${
@@ -45,7 +49,7 @@ const Nav = () => {
 			</button>
 
 			<aside
-				className="side-menu z-10 scroll-smooth"
+				className="side-menu z-10 scroll-smooth block md:hidden"
 				style={{
 					transform: isSideMenuOpen
 						? 'translateX(0%)'
