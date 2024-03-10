@@ -18,8 +18,6 @@ const Nav = () => {
 		document.body.style.overflow = isSideMenuOpen ? 'hidden' : 'unset'
 	}, [isSideMenuOpen])
 
-	console.log(scrollDir, ' - this is the scroll')
-
 	const toggleMenu = () => setIsSideMenuOpen(prevVal => !prevVal)
 	const handleScroll = () => setScrolledToTop(window.scrollY < 50)
 
